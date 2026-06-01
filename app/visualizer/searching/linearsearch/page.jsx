@@ -1,8 +1,8 @@
-import LinearSearchAnimation from "@/app/visualizer/array/linearsearch/animation";
+import LinearSearchAnimation from "@/app/visualizer/searching/linearsearch/animation";
 import ExploreOther from "@/app/components/ui/exploreOther";
-import Code from "@/app/visualizer/array/linearsearch/codeBlock";
-import Quiz from "@/app/visualizer/array/linearsearch/quiz";
-import Content from "@/app/visualizer/array/linearsearch/content";
+import Code from "@/app/visualizer/searching/linearsearch/codeBlock";
+import Quiz from "@/app/visualizer/searching/linearsearch/quiz";
+import Content from "@/app/visualizer/searching/linearsearch/content";
 import ArticleActions from "@/app/components/ui/ArticleActions";
 import ModuleCard from "@/app/components/ui/ModuleCard";
 import VisualizerPageLayout, {
@@ -55,7 +55,7 @@ export const metadata = {
 export default function Page() {
   return (
     <VisualizerPageLayout
-      paths={createVisualizerPaths("Array", "Linear Search")}
+      paths={createVisualizerPaths("Searching", "Linear Search")}
       title="Linear Search"
       headerActions={<ArticleActions />}
       animation={<LinearSearchAnimation />}

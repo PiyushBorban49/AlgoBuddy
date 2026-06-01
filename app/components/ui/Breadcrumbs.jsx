@@ -4,13 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const VISUALIZER_SLUG_BY_SEGMENT = {
-  searching: "array",
-  sorting: "array",
-  arrays: "array",
+  searching: "searching",
+  sorting: "sorting",
+  arrays: "arrays",
   stack: "stack",
   queue: "queue",
-  linkedlist: "linked-list",
-  linkedList: "linked-list",
+  linkedlist: "linkedlist",
+  linkedList: "linkedlist",
   trees: "tree",
   graph: "graph",
   hashmap: "hashmap",

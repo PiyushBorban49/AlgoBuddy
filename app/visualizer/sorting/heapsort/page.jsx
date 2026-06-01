@@ -1,7 +1,7 @@
-import Animation from "@/app/visualizer/array/heapsort/animation";
-import Content from "@/app/visualizer/array/heapsort/content";
-import Code from "@/app/visualizer/array/heapsort/codeBlock";
-import Quiz from "@/app/visualizer/array/heapsort/quiz";
+import Animation from "@/app/visualizer/sorting/heapsort/animation";
+import Content from "@/app/visualizer/sorting/heapsort/content";
+import Code from "@/app/visualizer/sorting/heapsort/codeBlock";
+import Quiz from "@/app/visualizer/sorting/heapsort/quiz";
 import ExploreOther from "@/app/components/ui/exploreOther";
 import ModuleCard from "@/app/components/ui/ModuleCard";
 import TrackVisit from "@/app/components/ui/TrackVisit";
@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <TrackVisit name="Heap Sort" path="/visualizer/array/heapsort" category="Array" />
       <VisualizerPageLayout
-        paths={createVisualizerPaths("Array", "Heap Sort")}
+        paths={createVisualizerPaths("Sorting", "Heap Sort")}
         title="Heap Sort"
         animation={<Animation />}
         content={<Content />}

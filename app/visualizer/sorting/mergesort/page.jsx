@@ -1,7 +1,7 @@
-import Animation from "@/app/visualizer/array/countingsort/animation";
-import Content from "@/app/visualizer/array/countingsort/content";
-import Quiz from "@/app/visualizer/array/countingsort/quiz";
-import Code from "@/app/visualizer/array/countingsort/codeBlock";
+import Animation from "@/app/visualizer/sorting/mergesort/animation";
+import Content from "@/app/visualizer/sorting/mergesort/content";
+import Quiz from "@/app/visualizer/sorting/mergesort/quiz";
+import Code from "@/app/visualizer/sorting/mergesort/codeBlock";
 import ExploreOther from "@/app/components/ui/exploreOther";
 import ModuleCard from "@/app/components/ui/ModuleCard";
 import TrackVisit from "@/app/components/ui/TrackVisit";
@@ -9,31 +9,31 @@ import VisualizerPageLayout, { createVisualizerPaths } from "@/app/visualizer/co
 import { MODULE_MAPS } from "@/lib/modulesMap";
 
 export const metadata = {
-  title: "Counting Sort Algorithm | Step-by-Step Animation",
-  description: "Learn Counting Sort with interactive animations.",
+  title: "Merge Sort Algorithm | Step-by-Step Animation",
+  description: "Learn Merge Sort with interactive animations.",
   robots: "index, follow",
-  openGraph: { images: [{ url: "/og/visualizer.png", width: 1200, height: 630, alt: "Counting Sort" }] },
+  openGraph: { images: [{ url: "/og/visualizer.png", width: 1200, height: 630, alt: "Merge Sort" }] },
 };
 
 export default function Page() {
   return (
     <>
-      <TrackVisit name="Counting Sort" path="/visualizer/array/countingsort" category="Array" />
+      <TrackVisit name="Merge Sort" path="/visualizer/array/mergesort" category="Array" />
       <VisualizerPageLayout
-        paths={createVisualizerPaths("Array", "Counting Sort")}
-        title="Counting Sort"
+        paths={createVisualizerPaths("Sorting", "Merge Sort")}
+        title="Merge Sort"
         animation={<Animation />}
         content={<Content />}
         code={<Code />}
         quiz={<Quiz />}
-        moduleCard={<ModuleCard moduleId={MODULE_MAPS.countingSort} description="Mark Counting Sort as done and view it on your dashboard" initialDone={false} />}
+        moduleCard={<ModuleCard moduleId={MODULE_MAPS.mergeSort} description="Mark Merge Sort as done and view it on your dashboard" initialDone={false} />}
         exploreOther={<ExploreOther title="Explore Sorting Algorithms" links={[
           { text: "Bubble Sort", url: "/visualizer/array/bubblesort" },
           { text: "Selection Sort", url: "/visualizer/array/selectionsort" },
           { text: "Insertion Sort", url: "/visualizer/array/insertionsort" },
-          { text: "Merge Sort", url: "/visualizer/array/mergesort" },
           { text: "Quick Sort", url: "/visualizer/array/quicksort" },
           { text: "Comparison Mode", url: "/visualizer/array/comparison" },
+          { text: "Counting Sort", url: "/visualizer/array/countingsort" },
           { text: "Heap Sort", url: "/visualizer/array/heapsort" },
         ]} />}
       />

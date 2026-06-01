@@ -1,7 +1,7 @@
-import Animation from "@/app/visualizer/array/insertionsort/animation";
-import Content from "@/app/visualizer/array/insertionsort/content";
-import Code from "@/app/visualizer/array/insertionsort/codeBlock";
-import Quiz from "@/app/visualizer/array/insertionsort/quiz";
+import Animation from "@/app/visualizer/sorting/insertionsort/animation";
+import Content from "@/app/visualizer/sorting/insertionsort/content";
+import Code from "@/app/visualizer/sorting/insertionsort/codeBlock";
+import Quiz from "@/app/visualizer/sorting/insertionsort/quiz";
 import ExploreOther from "@/app/components/ui/exploreOther";
 import ModuleCard from "@/app/components/ui/ModuleCard";
 import TrackVisit from "@/app/components/ui/TrackVisit";
@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <TrackVisit name="Insertion Sort" path="/visualizer/array/insertionsort" category="Array" />
       <VisualizerPageLayout
-        paths={createVisualizerPaths("Array", "Insertion Sort")}
+        paths={createVisualizerPaths("Sorting", "Insertion Sort")}
         title="Insertion Sort"
         animation={<Animation />}
         content={<Content />}

@@ -113,52 +113,70 @@ const sections = [
     ],
   },
   {
-    title: "Array",
-    desc: "Searching & sorting algorithms on contiguous memory",
+    title: "Arrays",
+    desc: "Contiguous collections of memory. Master array traversals, pointer techniques, and window patterns.",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 5l7 7-7 7"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
       </svg>
     ),
     info: {
-      About:
-        "An array is a data structure that stores multiple values of the same type in a single variable. Each value is stored at a specific index, starting from 0.",
+      About: "An array is a data structure that stores multiple values of the same type in a single variable. Each value is stored at a specific index, starting from 0.",
       Representation: <ArrayModal />,
     },
     subsections: [
       {
-        title: "Searching",
-        items: [
-          { name: "Linear Search", path: "/visualizer/array/linearsearch" },
-          { name: "Binary Search", path: "/visualizer/array/binarysearch" },
-        ],
-      },
-      {
-        title: "Sorting",
-        items: [
-          { name: "Bubble Sort", path: "/visualizer/array/bubblesort" },
-          { name: "Selection Sort", path: "/visualizer/array/selectionsort" },
-          { name: "Insertion Sort", path: "/visualizer/array/insertionsort" },
-          { name: "Merge Sort", path: "/visualizer/array/mergesort" },
-          { name: "Quick Sort", path: "/visualizer/array/quicksort" },
-          { name: "Counting Sort", path: "/visualizer/array/countingsort" },
-        ],
-      },
-      {
         title: "Interview Patterns",
         items: [
-          { name: "Sliding Window", path: "/visualizer/array/slidingwindow" },
+          { name: "Sliding Window", path: "/visualizer/arrays/slidingwindow" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Searching",
+    desc: "Efficient algorithms to find elements in data structures.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    ),
+    info: {
+      About: "Searching algorithms are used to retrieve information stored within some data structure, or calculated in the search space of a problem domain.",
+      Representation: null,
+    },
+    subsections: [
+      {
+        title: "Algorithms",
+        items: [
+          { name: "Linear Search", path: "/visualizer/searching/linearsearch" },
+          { name: "Binary Search", path: "/visualizer/searching/binarysearch" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Sorting",
+    desc: "Reorganize data into specific orders using optimized comparison and counting techniques.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+      </svg>
+    ),
+    info: {
+      About: "Sorting is the process of arranging data in a specific order, typically ascending or descending. Efficient sorting is important for optimizing other algorithms like binary search.",
+      Representation: null,
+    },
+    subsections: [
+      {
+        title: "Algorithms",
+        items: [
+          { name: "Bubble Sort", path: "/visualizer/sorting/bubblesort" },
+          { name: "Selection Sort", path: "/visualizer/sorting/selectionsort" },
+          { name: "Insertion Sort", path: "/visualizer/sorting/insertionsort" },
+          { name: "Merge Sort", path: "/visualizer/sorting/mergesort" },
+          { name: "Quick Sort", path: "/visualizer/sorting/quicksort" },
+          { name: "Counting Sort", path: "/visualizer/sorting/countingsort" },
         ],
       },
     ],
