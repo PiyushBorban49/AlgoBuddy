@@ -10,7 +10,7 @@ import useVisualizerReset from "@/app/hooks/useVisualizerReset";
 import ChallengeModePanel, {
   createOptions,
   useSortingChallenge,
-} from "@/app/visualizer/array/components/ChallengeMode";
+} from "@/app/visualizer/components/ChallengeMode";
 
 const getFontSize = (value) => {
   const len = String(value).length;
@@ -206,8 +206,8 @@ const InsertionSortVisualizer = () => {
 
   // keyboard shortcuts
   useVisualizerKeyboard({
-    onStart:       insertionSort,
-    onReset:       reset,
+    onStart: insertionSort,
+    onReset: reset,
     onSpeedChange: setSpeed,
     onTogglePlayPause: togglePlayPause,
     speed,
@@ -225,20 +225,21 @@ const InsertionSortVisualizer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
             <div className="flex flex-col gap-1">
               <RandomArray onGenerate={(newArray) => { setArray(newArray); setSorted(false); resetStats(); }} disabled={sorting} isPrimary={array.length === 0} />
-              <CustomArrayInput 
-                onUseCustomArray={(newArray) => { 
-                  setArray(newArray); 
-                  setSorted(false); 
-                  resetStats(); }} 
-                    disabled={sorting}   
-                    currentArray={array}  
-              className="w-full" />
+              <CustomArrayInput
+                onUseCustomArray={(newArray) => {
+                  setArray(newArray);
+                  setSorted(false);
+                  resetStats();
+                }}
+                disabled={sorting}
+                currentArray={array}
+                className="w-full" />
             </div>
             <div className="flex flex-col gap-2 justify-between">
               <button onClick={insertionSort} disabled={!array.length || sorting || sorted} className="w-full disabled:opacity-75 bg-none bg-[#a435f0] hover:bg-[#8f2cd6] px-4 py-2 rounded shadow-sm transition-all duration-300 text-sm sm:text-base text-white">
                 {sorting ? "Sorting..." : "Start Insertion Sort"}
               </button>
-              <button 
+              <button
                 onClick={reset} disabled={sorting} className="w-full bg-none text-[#a435f0] border border-[#a435f0] hover:bg-[#f3e8ff] dark:hover:bg-[#a435f0]/20 px-4 py-2 rounded transition-colors text-sm sm:text-base">
                 Reset All
               </button>
@@ -314,15 +315,14 @@ const InsertionSortVisualizer = () => {
                     <div
                       ref={(el) => (barRefs.current[index] = el)}
                       className={`bar w-16 h-16 flex items-center justify-center rounded-lg border-2 transition-all duration-300 ${getFontSize(value)} font-medium
-                            ${
-                              isCurrent
-                                ? "bg-yellow-400 dark:bg-yellow-400 border-yellow-600 dark:border-yellow-600 dark:text-gray-800"
-                                : isComparing
-                                ? "bg-red-400 dark:bg-red-400 border-red-600 dark:border-red-600 dark:text-gray-800"
-                                : isSorted
-                                ? "bg-green-400 dark:bg-green-400 border-green-600 dark:border-green-600 dark:text-gray-800"
-                                : "bg-primary/80 dark:bg-primary/80 border-primary dark:border-primary dark:text-gray-800"
-                            }`}
+                            ${isCurrent
+                          ? "bg-yellow-400 dark:bg-yellow-400 border-yellow-600 dark:border-yellow-600 dark:text-gray-800"
+                          : isComparing
+                            ? "bg-red-400 dark:bg-red-400 border-red-600 dark:border-red-600 dark:text-gray-800"
+                            : isSorted
+                              ? "bg-green-400 dark:bg-green-400 border-green-600 dark:border-green-600 dark:text-gray-800"
+                              : "bg-primary/80 dark:bg-primary/80 border-primary dark:border-primary dark:text-gray-800"
+                        }`}
                     >
                       {value}
                     </div>

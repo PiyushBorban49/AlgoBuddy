@@ -12,7 +12,7 @@ import { useVisualizerSession } from "@/app/contexts/VisualizerSessionContext";
 import ChallengeModePanel, {
   createOptions,
   useSortingChallenge,
-} from "@/app/visualizer/array/components/ChallengeMode";
+} from "@/app/visualizer/components/ChallengeMode";
 
 const getFontSize = (value) => {
   const len = String(value).length;
@@ -55,7 +55,7 @@ const BubbleSortVisualizer = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [totalSteps, setTotalSteps] = useState(0);
 
-  
+
   useEffect(() => { saveToStorage("bubble-speed", speed); }, [speed]);
 
   const [comparisons, setComparisons] = useState(0);
@@ -202,12 +202,12 @@ const BubbleSortVisualizer = () => {
   // doesn't re-subscribe on every render.
   const handleStart = useCallback(() => {
     bubbleSort();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sorting, sorted, array, speed]);
 
   const handleReset = useCallback(() => {
     reset();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSpeedChange = useCallback((nextSpeed) => {
@@ -279,8 +279,8 @@ const BubbleSortVisualizer = () => {
 
   // keyboard shortcuts
   useVisualizerKeyboard({
-    onStart:       handleStart,
-    onReset:       handleReset,
+    onStart: handleStart,
+    onReset: handleReset,
     onSpeedChange: handleSpeedChange,
     onTogglePlayPause: togglePlayPause,
     speed,
@@ -387,8 +387,8 @@ const BubbleSortVisualizer = () => {
               {currentStep > 0 && !sorted
                 ? `Comparing index ${currentIndices.i} and ${currentIndices.j}`
                 : sorted
-                ? "Sorting complete!"
-                : "Start sorting to see steps"}
+                  ? "Sorting complete!"
+                  : "Start sorting to see steps"}
             </div>
           </div>
           <div className="col-span-2 bg-gray-100 dark:bg-neutral-900 p-3 rounded mt-2">
@@ -418,8 +418,8 @@ const BubbleSortVisualizer = () => {
                         ${isComparing
                           ? "bg-yellow-400 dark:bg-yellow-400 border-yellow-600 dark:border-yellow-600 dark:text-gray-900"
                           : isSorted
-                          ? "bg-green-400 dark:bg-green-400 border-green-600 dark:border-green-600 dark:text-gray-900"
-                          : "bg-primary/80 dark:bg-primary/80 border-primary dark:border-primary dark:text-gray-900"
+                            ? "bg-green-400 dark:bg-green-400 border-green-600 dark:border-green-600 dark:text-gray-900"
+                            : "bg-primary/80 dark:bg-primary/80 border-primary dark:border-primary dark:text-gray-900"
                         }`}
                     >
                       {value}
